@@ -74,7 +74,7 @@ function MochaJUnitReporter(runner, options) {
 
   this._runner.on('suite', function(suite) {
     if (suite.root) {
-      suite.title = 'Root Suite';
+      suite.title = options.suiteTitle;
     }
 
     if (!isInvalidSuite(suite)) {
